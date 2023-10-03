@@ -1,9 +1,9 @@
 === Ultimate Product Catalog ===
 custom release
 Requirements remains same as original source
-Tested on: 6.22
-Version: v5.2.7.1
-Working Branch: From_5.2.7_2023
+Tested on: 6.3
+Version: v5.2.11.1
+Working Branch: From_5.2.11_2023
 License: GPLv3
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 Credits: All credits to the actual contributors!
@@ -18,15 +18,16 @@ Stable tag: 5.2.7
 License: GPLv3
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
-Flexible, customizable and easy-to-use product catalog plugin with a modern, responsive design. Can be used standalone or integrated with WooCommerce.
+Add a product catalog to your site with blocks or shortcodes. Works with WooCommerce or standalone. Flexible and customizable, works with any theme.
 
 == Description ==
 
+Product catalog plugin that is a fully responsive and lets you showcase your products in a sleek and modern layout. 
+Comes with a powerful feature set and is easy to customize. 
+
 <a href='https://www.etoilewebdesign.com/ultimate-product-catalogue-demo/'>Product Catalog Demo</a>
 
-The Ultimate Product Catalog is a fully responsive plugin that lets you showcase your products in a sleek and modern catalog layout. It comes with a powerful feature set and is easy to customize. 
-
-<em>The plugin includes <strong>Gutenberg blocks</strong> as well as <strong>shortcodes</strong>, so you can display either your whole catalog or just individual products on any page, no matter which page editing system you are using. We also <strong>include several patterns</strong>, so you can integrate your products and catalog directly into your block-based theme.</em>
+<em>This catalog plugin includes <strong>Gutenberg blocks</strong> as well as <strong>shortcodes</strong>, so you can display either your whole catalog or just individual products on any page, no matter which page editing system you are using. We also <strong>include several patterns</strong>, so you can integrate your products and catalog directly into your block-based theme.</em>
 
 = Key Features =
 
@@ -271,6 +272,22 @@ For more info about the premium version, please see here: https://doc.etoilewebd
 
 == Changelog ==
 
+= 5.2.11 (2023-09-08) =
+- Fixed an issue with categories not syncing with WooCommerce.
+- Tested and declares compatibility with WooCommerce's High-Performance Order Storage.
+
+= 5.2.10 (2023-08-08) =
+- Fixed custom field dropdown options not hiding when there were no matching results and you had the hide empty filtering options setting enabled.
+- Tested for WordPress 6.3 compatibility/support.
+
+= 5.2.9 (2023-07-31) =
+- Fixed issue with orderby shortcode attribute only applying to the first page of products.
+- Fix for undefined property warning when importing.
+- Updated PHPSpreadsheet version. 
+
+= 5.2.8 (2023-07-07) =
+- Fixed issue with reset view count not working.
+
 = 5.2.7 (2023-06-02) =
 - Fixed issue in which custom fields with a dropdown control type were not resetting after clicking the "Clear All" button.
 
@@ -312,221 +329,4 @@ For more info about the premium version, please see here: https://doc.etoilewebd
 - Small styling updates for the admin/dashboard.
 - Tested with PHP 8.1 and corrected for a warning that was appearing when submitting a review on the product page.
 
-= 5.1.10 (2022-09-07) =
-- Updated the automatic related products to make sure they pull products from the same category.
-
-= 5.1.9 (2022-08-22) =
-- Updating a condition to make sure the new block patterns don't cause an error on WordPress installations using a version of WordPress older than 5.5.
-
-= 5.1.8 (2022-08-09) =
-- Introducing new block patterns, which can be used to integrate a whole catalog or featured products directly into your block-based theme templates.
-- Added a block to insert specific (featured) products into a page or post.
-- Added catalog and tag IDs to their respective admin overview tables.
-- Custom field input values are now automatically sorted alphabetically.
-- Fixed an issue causing the search widget to not work.
-- Fixed a CSS conflict with the Order Tracking plugin causing the styling of some toggle switches to be incorrect.
-
-= 5.1.7 (2022-05-20) =
-- Tested with WordPress 6.0.
-
-= 5.1.6 (2022-05-17) =
-- Added previews for Gutenberg blocks (i.e. on the page edit screen, when you add the block, it will show a preview).
-- Fixed incorrect URL for catalog links on the admin dashboard page.
-
-= 5.1.5 (2022-05-10) =
-- Updating escaping to fix issue with before and after widget code displaying.
-
-= 5.1.4 (2022-04-22) =
-- Added the ability to update existing products via spreadsheet (via ID column, which has been added to both the export and import).
-- Added a link type custom field.
-- Added a rich text editor type custom field.
-- Added "Back to Catalog" link to product comparison page. 
-- Added an alt attribute to Product Image elements.
-- Added tabindex to "Compare" button.
-- Removed extra spaces that were showing in the edit text areas for certain fields.
-- Fixed an issue in which the handles on the price slider filter wouldn't return to their starting positions when using the "Clear All" button.
-- Fixed an issue in which the "Clear All" button wasn't appearing when some custom field control types were used.
-- Fixed an issue in which setting "Catalog Overview Mode" to "Categories and Subcategories" was causing the front end to display nothing when selecting a category with no subcategory.
-- Fixed an issue in which, if a product had only one additional image, it couldn't be deleted.
-- Fixed an issue in which the next page button was going past the last page.
-- Fixed a styling issue that was causing overly-cropped images on the product comparison page.
-
-= 5.1.3 (2022-04-13) =
-- Fixed an issue in which the filtering wasn't being applied for custom fields in some instances.
-
-= 5.1.2 (2022-04-11) =
-- Fixed an issue in which the slider control type for number custom fields was filtering products for exact values instead of everything in between.
-- Styling updates for admin screens.
-
-= 5.1.1 (2022-03-01) =
-- Updated import to allow text custom field values to include some limited HTML.
-- Fixed an issue with the export of custom fields with multiple values.
-
-= 5.1.0 (2022-02-01) =
-- Fixed compatibility issue when using block-based themes.
-- Changed how premium settings areas are previewed.
-
-= 5.0.31 (2022-01-21) =
-- Fixed an issue in which the Details button in the lightbox mode was not linking to the product page.
-- Updated an incorrect function name that was causing an internal server error in certain instances.
-
-= 5.0.30 (2022-01-14) =
-- Fixed an issue with the lightbox mode still redirecting to the product page.
-- Fixed an issue in which Gutenberg block editor code was being output in the lightbox mode lightbox.
-
-= 5.0.29 (2022-01-06) =
-- Corrected an issue that was causing all products to be displayed even if you chose a specific filter.
-
-= 5.0.28 (2022-01-04) =
-- Updated class naming and domain issues.
-- Fixed a few styling issues with the walk-through.
-
-= 5.0.27 (2022-01-04) =
-- Updates to sanitizing and escaping. 
-- Update to the way files are called.
-
-= 5.0.26 (2021-12-29) =
-- Updating nonce and authorization checks for AJAX calls.
-- Updating sanitizing and escaping. 
-
-= 5.0.25 (2021-12-01) =
-- Updating the enqueue condition for the catalog block to fix an issue with the media library.
-
-= 5.0.24 (2021-11-24) =
-- Changed the catalog selection in the Gutenberg block to a dropdown (with all existing catalogs) instead of the text input for the ID.
-- Localized the strings in the Gutenberg block.
-- Fixed a warning for null product image on the product edit screen related to PHP 8.
-
-= 5.0.23 (2021-11-04) =
-- Updates to SAP library version 2.6.1
-- Makes the display of a number of settings conditional on the value of other settings
-- Allows the use of paragraphs and line breaks within the product description on the single product page
-- Changes the sanitization function for custom fields, allowing HTML tags to be used if the template is edited
-
-= 5.0.22 (2021-10-18) =
-- Minor update so that prices are not appended to the URL if price filtering is disabled
-
-= 5.0.21 (2021-10-13) =
-- Fixed an error where some products created in the installation walk-through weren't being displayed in the published list
-
-= 5.0.20 (2021-09-10) =
-- Updated the settings page library.
-- Fixed an issue in which, on import, the category was not being assigned if no sub-category was specified.
-- Updated the import so the display setting for a product is enabled by default.
-- Fixed an issue with the product page template when pretty permalink were enabled and the catalog was on your homepage.
-- Updated the WooCommerce sub-settings to be conditional on the main WooCommerce sync being enabled.
-- Added alphabetical sort buttons to the catalog edit screen.
-
-= 5.0.19 (2021-09-03) =
-- Added the 'Catalog ID' column back into the catalogs screen.
-- Removed a warning on the catalog edit screen if a catalog had no items in it.
-
-= 5.0.18 (2021-08-24) =
-- Added additional images to the export/import.
-- Added an id attribute to taxonomy filter radio buttons and the for attribute to their labels.
-- Removed a warning.
-
-= 5.0.17 (2021-08-13) =
-- Fix for the catalogs not being displayed in the dashboard when navigating from the sidebar submenu
-- Fix for the last image and video not being deletable from a product
-- Fix for added videos showing a broken thumbnail on the product edit screen
-- Corrected a few minor styling issues with the comparison page images, the inputs for the custom field slider control type, related product thumbnail wrapping, thumbnail images on default product page and the strikethrough of the original price on the product page for sale items.
-
-= 5.0.16 (2021-08-10) =
-- Fixed an issue causing the newest/oldest sorting to be reversed.
-- Fixed an issue with imported products not showing up in the Products tab in the admin.
-- Fixed a styling issue sometimes causing the catalog to use a different font family.
-- Fixed an issue with the Display Product Catalog block not correctly displaying the catalog.
-- Update for the deprecated block_categories.
- 
-
-= 5.0.15 (2021-07-28) =
-- Fixed an issue with the value for a file type custom field being erased when updating a product.
-- Fixed an issue in which the thumbnail view was showing for all views in paginated catalogs.
-- Fixed an issue with the thumbnail view not loading when the catalog had something other than thumbnail set as the starting layout.
-- Fixed a notice that was causing custom fields to not display on the custom product page.
-
-= 5.0.14 (2021-07-27) =
-- Added an option to choose the number of columns in the thumbnail view for large screens.
-- Added the ability to drag and drop to re-order items on the products post type and taxonomy screens, so you can now drag and drop categories and tags into the order you want, and also drag and drop products within a category.
-- Fixed an issue in which you couldn't update the featured image for a product that was using an external image URL in the old version.
-- Fixed an issue in which deleted products were still showing as a blank row on the catalog edit screen.
-- Fixed an issue in the Post ID column on the Products admin screen, where the word "Duplicate" was showing instead of the ID.
-- Fixed a styling issue in which, in certain circumstances, there was a missing margin between thumbnails.
-- Fixed an issue with the currency symbol still showing when no price was set for a product.
-- Fixed an issue with custom fields not filtering if they were using the dropdown control type.
-- Made it so the upgrading process (from old version to new version of the plugin) runs in the background until complete (to correct the issue those with large catalogs were sometimes seeing if it timed out and didn't restart). 
-
-= 5.0.13 (2021-07-23) =
-- <strong>Please be sure to back up your site before updating. The 5.0 update includes a big change to the construction of the plugin, so please take caution and test before updating on a live site (or wait a few days before updating in case some minor corrective updates need to be released).</strong>
-- Fixed sale flag not showing.
-- Corrected URL for catalog shortcut links on the Dashboard screen.
-- Enables custom field file URLs to be links when used in custom tabs.
-- Further update for parse errors when updating on Windows servers.
-
-= 5.0.12 (2021-07-21) =
-- <strong>Please be sure to back up your site before updating. This update includes a big change to the construction of the plugin, so please take caution and test before updating on a live site (or wait a few days before updating in case some minor corrective updates need to be released).</strong>
-- Removed UPCP_Main.php (no more duplicate plugin entry or false update flag).
-- Fixed a scrolling/styling issue with the "add items" pop-up on the catalog edit screen.
-- Updated the output of the value for a file type custom field in the Additional Information tab, so the URL is a link.
-- Regular price now re-shows, crossed out, in addition to the sale price.
-- Added Restore Default Layout button to custom product page layout editor screen.
-- Fixed the link for the "Back" element on the custom product page, so it now correct goes back to the catalog. 
-- Further changes to rectify parse errors happening on Windows servers.
-
-= 5.0.11 (2021-07-21) =
-- <strong>Please be sure to back up your site before updating. This update includes a big change to the construction of the plugin, so please take caution and test before updating on a live site (or wait a few days before updating in case some minor corrective updates need to be released).</strong>
-- Fixed a scrolling/styling issue with the "add items" pop-up on the catalog edit screen.
-- Updated the output of the value for a file type custom field in the Additional Information tab, so the URL is a link.
-- Regular price now re-shows, crossed out, in addition to the sale price.
-- Added Restore Default Layout button to custom product page layout editor screen.
-- Fixed the link for the "Back" element on the custom product page, so it now correct goes back to the catalog. 
-- Further changes to rectify parse errors happening on Windows servers.
-
-= 5.0.10 (2021-07-20) =
-- <strong>Please be sure to back up your site before updating. This update includes a big change to the construction of the plugin, so please take caution and test before updating on a live site (or wait a few days before updating in case some minor corrective updates need to be released).</strong>
-- Fix for the list view description being incorrectly escaped.
-- Fix for the "Product Displaying" toggle not being correctly applied.
-- Fix for the drag and drop catalog item re-ordering.
-- Styling fix for the "add items" pop-up being partially hidden for some screen resolutions.
-- Re-introduces the "Edit Product" link in the admin bar.
-
-= 5.0.9 (2021-07-20) =
-- <strong>Please be sure to back up your site before updating. This update includes a big change to the construction of the plugin, so please take caution and test before updating on a live site (or wait a few days before updating in case some minor corrective updates need to be released).</strong>
-- Fix for the issue with duplicated products after updating from 4.4.x to 5.0.x.
-- Fix for a parse issue on Windows servers
-- Facilitating the re-import process for users who have products not displaying after updating from 4.4.x to 5.0.x.
-
-= 5.0.1 to 5.0.8 (2021-07-19) =
-- Fixes for versioning issues/errors relating to activation of the 5.0 update.
-
-= 5.0.0 (2021-07-19) =
-- <strong>5.0.0 is here with huge improvements to catalog performance, usability, design and layout, UI/UX, filtering, and so much more!</strong>
-- <strong>This update includes a big change to the construction of the plugin, so please take caution and test before updating on a live site (or wait a few days before updating in case some minor corrective updates need to be released).</strong>
-- <strong>Please also double check after updating to see if the plugin was automatically re-activated. If not, you just need to manually click the Activate button.</strong>
-- <strong>The class names/IDs/selectors have been standardized across the whole plugin. This was necessary and long overdue. However, as a consequence, it is quite likely that, if you are using custom CSS, some or many of the selectors will have been updated. If you find some of your custom CSS no longer working, please just provide us with your existing custom CSS and we will provide you with updated CSS to do the same.</strong>
-- Rebuilt the plugin, from the ground up, to be object oriented.
-- Products and catalogs are now custom post types! Make use of Gutenberg and WordPress's built-in post type meta structure to edit your products.
-- Categories and Tags are now taxonomies. Easily set up categories and sub-categories, and assign a product to multiple categories!
-- <strong>Huge performance boost relating to query and page load time, due to the use of post types and taxonomies, and a completely rewritten filtering and querying system.</strong>
-- Default catalog design and layout and have been completely overhauled. The catalog looks great right out of the box!
-- The premium styling options have been totally revamped, including a brand new fixed thumbnail size option, rewritten catalog styles, consolidated font/color/border/etc. options, and much more!
-- Updated the premium product page types to be even more functional and sleek.
-- Updated the product edit UI to be more focused and clear.
-- Updated the catalog edit UI.
-- Updated the structure of the settings pages.
-- Consolidated many settings.
-- All filtering and sorting now applies across pagination.
-- Updated the structured data to use the new JSON-LD format.
-- Updates to the breadcrumbs.
-- Cleaned up/fixed styling and functionality issues relating to the lightbox features.
-- Fixed issues relating to the infinite scroll feature.
-- Fixed issue with thumbnail support applying to certain images it shouldn't have been (e.g. the main image on certain product page layouts). 
-- Fixed several issues related to the WooCommerce sync/integration.
-- Updated several option descriptions, to clarify them.
-- Updated the conditional loading of CSS and JS assets. 
-- Updated labelling options.
-- Cleaning up/removing unnecessary code and files.
-- Eliminating notices.
-- JS localization.
-- Updated .pot file. (If you have created a translation based on the old version, you might need to just update your .po file for this new version.)
+[See changelog for all versions](https://www.etoilewebdesign.com/changelogs/ultimate-product-catalogue.txt).

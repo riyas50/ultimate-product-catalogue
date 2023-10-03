@@ -1,15 +1,17 @@
 <?php
-/*
-Plugin Name: Ultimate Product Catalog
-Plugin URI: https://www.etoilewebdesign.com/plugins/ultimate-product-catalog/
-Description: Flexible, customizable and easy-to-use product catalog plugin with a modern, responsive design. Can be used standalone or integrated with WooCommerce.
-Author: Etoile Web Design
-Author URI: https://www.etoilewebdesign.com/
-Terms and Conditions: https://www.etoilewebdesign.com/plugin-terms-and-conditions/
-Text Domain: ultimate-product-catalogue
-Version: 5.2.7.1
-*/
-
+/**
+ * Plugin Name: Ultimate Product Catalog
+ * Plugin URI: https://www.etoilewebdesign.com/plugins/ultimate-product-catalog/
+ * Description: Add a product catalog to your site with blocks or shortcodes. Works with WooCommerce or standalone. Flexible and customizable, works with any theme.
+ * Version: 5.2.11.1
+ * Author: Etoile Web Design
+ * Author URI: https://www.etoilewebdesign.com/
+ * Terms and Conditions: https://www.etoilewebdesign.com/plugin-terms-and-conditions/
+ * Text Domain: ultimate-product-catalogue
+ * Domain Path: /languages/
+ * WC requires at least: 7.1
+ * WC tested up to: 8.0
+ */
 
 if ( ! defined( 'ABSPATH' ) )
 	exit;
@@ -50,7 +52,7 @@ class ewdupcpInit {
 		define( 'EWD_UPCP_PLUGIN_URL', untrailingslashit( plugin_dir_url( __FILE__ ) ) );
 		define( 'EWD_UPCP_PLUGIN_FNAME', plugin_basename( __FILE__ ) );
 		define( 'EWD_UPCP_TEMPLATE_DIR', 'ewd-upcp-templates' );
-		define( 'EWD_UPCP_VERSION', '5.2.7.1' );
+		define( 'EWD_UPCP_VERSION', '5.2.11.1' );
 
 		define( 'EWD_UPCP_PRODUCT_POST_TYPE', 'upcp_product' );
 		define( 'EWD_UPCP_CATALOG_POST_TYPE', 'upcp_catalog' );
@@ -161,6 +163,8 @@ class ewdupcpInit {
 		add_filter( 'plugin_action_links',				array( $this, 'plugin_action_links' ), 10, 2);
 
 		add_action( 'wp_ajax_ewd_upcp_hide_helper_notice', array( $this, 'hide_helper_notice' ) );
+
+		add_action( 'before_woocommerce_init', array( $this, 'declare_wc_hpos' ) );
 	}
 
 	/**
@@ -623,6 +627,17 @@ class ewdupcpInit {
 		die();
 	}
 
+	/**
+	 * Declares compatibility with WooCommerce High-Performance Order Storage
+	 * @since 5.2.11
+	 */
+	public function declare_wc_hpos() {
+
+		if ( class_exists( \Automattic\WooCommerce\Utilities\FeaturesUtil::class ) ) {
+
+			\Automattic\WooCommerce\Utilities\FeaturesUtil::declare_compatibility( 'custom_order_tables', __FILE__, true );
+		}
+	}
 }
 } // endif;
 

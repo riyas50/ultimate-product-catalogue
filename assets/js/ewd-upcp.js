@@ -775,7 +775,9 @@ function ewd_upcp_get_request_string_and_set_history() {
 
 	var id = jQuery( 'input[name="catalog-id"]' ).val();
 	var excluded_views = jQuery('input[name="catalog-excluded-views"]').val();
-	var current_page = jQuery( 'input[name="catalog-current-page"]' ).val();
+	var current_page = jQuery( 'input[name="catalog-current-page"]' ).val();	
+	var orderby = jQuery( 'input[name="catalog-order-by"]' ).val();
+	var order = jQuery( 'input[name="catalog-order"]' ).val();
 	var products_per_page = jQuery( 'input[name="catalog-product-per-page"]' ).val();
 	var ajax_url = jQuery( 'input[name="catalog-base-url"]' ).val();
 
@@ -783,8 +785,8 @@ function ewd_upcp_get_request_string_and_set_history() {
 
 	var orderby_select_value = jQuery( 'select[name="ewd-upcp-sort-by"]' ).val();
 
-	var orderby = orderby_select_value ? orderby_select_value.substring( 0, orderby_select_value.indexOf( '_' ) ) : '';
-	var order = orderby_select_value ? orderby_select_value.substring( orderby_select_value.indexOf( '_' ) + 1 ) : '';
+	orderby = orderby_select_value ? orderby_select_value.substring( 0, orderby_select_value.indexOf( '_' ) ) : orderby;
+	order = orderby_select_value ? orderby_select_value.substring( orderby_select_value.indexOf( '_' ) + 1 ) : order;
 	
 	var min_price = jQuery( '#ewd-upcp-price-range input[name="ewd-upcp-price-slider-min"]' ).val();
 	var max_price = jQuery( '#ewd-upcp-price-range input[name="ewd-upcp-price-slider-max"]' ).val();
@@ -1091,7 +1093,7 @@ function ewd_upcp_adjust_sidebar_counts( filter_counts ) {
 	});
 
 	// Custom Fields - dropdown
-	jQuery( 'select[name="ewd-upcp-catalog-custom-field-dropdown"] option' ).each( function() {
+	jQuery( '.ewd-upcp-catalog-sidebar-custom-field-div select option' ).each( function() {
 
 		if ( jQuery( this ).parent().data( 'custom_field_id' ) in filter_counts.custom_fields && jQuery( this ).val() in filter_counts.custom_fields[ jQuery( this ).parent().data( 'custom_field_id' ) ] ) {
 

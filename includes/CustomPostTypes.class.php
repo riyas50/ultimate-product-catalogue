@@ -1636,7 +1636,7 @@ class ewdupcpCustomPostTypes {
 
 		foreach ( $post_ids as $post_id ) {
 			
-			update_post_meta( $post_id, 'upcp_product_view_count', 0 );
+			update_post_meta( $post_id, 'views', 0 );
 		}
 
 		return $redirect_to;

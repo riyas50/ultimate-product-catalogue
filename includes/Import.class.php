@@ -199,7 +199,7 @@ class ewdupcpImport {
 
             		foreach ( $custom_fields as $custom_field ) {
 
-            			if ( $col_index == $custom_field->column ) { $product_custom_fields[ $custom_field->id ] = wp_kses_post( $value ); }
+            			if ( isset( $custom_field->column ) and $col_index == $custom_field->column ) { $product_custom_fields[ $custom_field->id ] = wp_kses_post( $value ); }
             		}
             	}
 	        }
